@@ -1,0 +1,2 @@
+# chesstrainer
+Chess trainer bot
