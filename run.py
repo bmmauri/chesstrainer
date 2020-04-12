@@ -132,7 +132,14 @@ def players(update, context):
     if len(_PLAYERS) == 0:
         context.bot.send_message(chat_id=chat_id, text='No players registered to the chess race')
     else:
-        context.bot.send_message(chat_id=chat_id, text='TODO LIST PLAYER')
+        player_list = "\n".join([p.username for p in _PLAYERS])
+        content = f"""
+PLAYER LIST
+
+{player_list}
+
+"""
+        context.bot.send_message(chat_id=chat_id, text=content)
 
 
 
